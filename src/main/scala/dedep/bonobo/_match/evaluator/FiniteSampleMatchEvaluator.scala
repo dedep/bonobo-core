@@ -1,8 +1,8 @@
 package dedep.bonobo._match.evaluator
 
 import com.typesafe.scalalogging.slf4j.Logger
-import dedep.bonobo._match.result.{Draw, WinB, WinA, MatchResult}
 import dedep.bonobo._match.Match
+import dedep.bonobo._match.result.{Draw, MatchResult, WinA, WinB}
 import org.slf4j.LoggerFactory
 
 import scala.util.Random
@@ -10,7 +10,8 @@ import scala.util.Random
 object FiniteSampleMatchEvaluator extends MatchEvaluator {
   val goalConstantFactor = 1.8
   val randomSample = 60
-  val goalsDifferenceFactor = 0.07968426076 // = 1 / 12.5495297376
+  val goalsDifferenceFactor = 0.07968426076
+  // = 1 / 12.5495297376
   val goalsDifferencePowerFactor = 1.3
 
   val log = Logger(LoggerFactory.getLogger(FiniteSampleMatchEvaluator.getClass))

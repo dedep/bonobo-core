@@ -1,7 +1,7 @@
 package dedep.bonobo.round.pair
 
 import dedep.bonobo.Common._
-import dedep.bonobo.round.{RoundUnit, Round}
+import dedep.bonobo.round.{Round, RoundUnit}
 import dedep.bonobo.team.Team
 
 import scala.util.Random

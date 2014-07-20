@@ -1,7 +1,7 @@
 package dedep.bonobo._match.evaluator
 
 import dedep.bonobo._match.Match
-import dedep.bonobo._match.result.{WinB, WinA, Draw}
+import dedep.bonobo._match.result.{Draw, WinA, WinB}
 import dedep.bonobo.team.Team
 import org.scalatest.FunSuite
 

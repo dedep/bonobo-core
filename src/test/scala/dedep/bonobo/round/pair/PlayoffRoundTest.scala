@@ -7,7 +7,7 @@ import org.scalatest.FunSuite
 
 class PlayoffRoundTest extends FunSuite {
 
-  test ("is final round") {
+  test("is final round") {
     //given
     val t1 = Team(1, 1)
     val t2 = Team(2, 2)
@@ -19,7 +19,7 @@ class PlayoffRoundTest extends FunSuite {
     assert(r.isFinalRound())
   }
 
-  test ("teams test") {
+  test("teams test") {
     //given
     val t1 = Team(1, 1)
     val t2 = Team(2, 2)
@@ -38,7 +38,7 @@ class PlayoffRoundTest extends FunSuite {
     assert(r.teams(3) == t4)
   }
 
-  test ("teams pots drawing") {
+  test("teams pots drawing") {
     //given
     val t1 = Team(1, 1)
     val t2 = Team(2, 3)
@@ -62,7 +62,7 @@ class PlayoffRoundTest extends FunSuite {
     assert(drawnPotsRound.pots(1).contains(t3))
   }
 
-  test ("teams units drawing") {
+  test("teams units drawing") {
     for (i <- 0 to 15) {
       //given
       val t1 = Team(1, 1)
@@ -88,7 +88,7 @@ class PlayoffRoundTest extends FunSuite {
     }
   }
 
-  test ("play fixture") {
+  test("play fixture") {
     //given
     val t1 = Team(1, 1)
     val t2 = Team(2, 3)
@@ -113,7 +113,7 @@ class PlayoffRoundTest extends FunSuite {
     assert(round.units(1).fixtures(0).forall(_.isInstanceOf[PlayedMatch]))
   }
 
-  test ("stepping test") {
+  test("stepping test") {
     //given
     val t1 = Team(1, 1)
     val t2 = Team(2, 3)
@@ -160,11 +160,11 @@ class PlayoffRoundTest extends FunSuite {
       fail()
     } catch {
       case _: IllegalStateException => None
-      case _:Throwable              => fail()
+      case _: Throwable => fail()
     }
   }
 
-  test ("promoted teams test") {
+  test("promoted teams test") {
     for (i <- 0 to 30) {
       //given
       val t1 = Team(1, 1)

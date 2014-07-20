@@ -8,7 +8,7 @@ import org.scalatest.FunSuite
 
 class PairTest extends FunSuite {
 
-  test ("test teams") {
+  test("test teams") {
     //given
     val t1 = Team(1, 1)
     val t2 = Team(2, 2)
@@ -18,7 +18,7 @@ class PairTest extends FunSuite {
     assert(pair.teams == t1 :: t2 :: Nil)
   }
 
-  test ("test pair fixtures count") {
+  test("test pair fixtures count") {
     //given
     val t1 = Team(1, 1)
     val t2 = Team(2, 2)
@@ -28,7 +28,7 @@ class PairTest extends FunSuite {
     assert(pair.fixturesCount == 2)
   }
 
-  test ("test pair fixtures") {
+  test("test pair fixtures") {
     //given
     val t1 = Team(1, 1)
     val t2 = Team(2, 2)
@@ -42,7 +42,7 @@ class PairTest extends FunSuite {
     assert(pair.fixtures(1).head.bTeam == t1)
   }
 
-  test ("test default results") {
+  test("test default results") {
     val t1 = Team(1, 1)
     val t2 = Team(2, 2)
     val pair = Pair((t1, t2))
@@ -60,7 +60,7 @@ class PairTest extends FunSuite {
     assert(pair.results(1).points == 0)
   }
 
-  test ("test results update - one doubled fixture") {
+  test("test results update - one doubled fixture") {
     //given
     val t1 = Team(1, 1)
     val t2 = Team(2, 2)
@@ -87,7 +87,7 @@ class PairTest extends FunSuite {
     assert(updatedResults(1).goalsConceded == 1)
   }
 
-  test ("playing fixture test - first fixture") {
+  test("playing fixture test - first fixture") {
     //given
     val t1 = Team(1, 1)
     val t2 = Team(2, 2)
@@ -116,7 +116,7 @@ class PairTest extends FunSuite {
     assert(playedUnit.results(0).points + playedUnit.results(1).points >= 2)
   }
 
-  test ("playing fixture test - two fixtures") {
+  test("playing fixture test - two fixtures") {
     //given
     val t1 = Team(1, 1)
     val t2 = Team(2, 2)

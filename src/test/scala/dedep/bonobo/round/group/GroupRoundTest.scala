@@ -7,7 +7,7 @@ import org.scalatest.FunSuite
 
 class GroupRoundTest extends FunSuite {
 
-  test ("is final round") {
+  test("is final round") {
     //given
     val t1 = Team(1, 1)
     val t2 = Team(2, 2)
@@ -21,7 +21,7 @@ class GroupRoundTest extends FunSuite {
     assert(!r.isFinalRound())
   }
 
-  test ("teams test") {
+  test("teams test") {
     //given
     val t1 = Team(1, 1)
     val t2 = Team(2, 2)
@@ -48,7 +48,7 @@ class GroupRoundTest extends FunSuite {
     assert(r.teams(7) == t8)
   }
 
-  test ("teams pots drawing") {
+  test("teams pots drawing") {
     //given
     val t1 = Team(1, 1)
     val t2 = Team(2, 2)
@@ -80,7 +80,7 @@ class GroupRoundTest extends FunSuite {
     assert(drawnPotsRound.pots(3).contains(t2))
   }
 
-  test ("teams units drawing") {
+  test("teams units drawing") {
     for (i <- 0 to 15) {
       //given
       val t1 = Team(1, 1)
@@ -115,7 +115,7 @@ class GroupRoundTest extends FunSuite {
     }
   }
 
-  test ("play fixture") {
+  test("play fixture") {
     //given
     val t1 = Team(1, 1)
     val t2 = Team(2, 2)
@@ -144,7 +144,7 @@ class GroupRoundTest extends FunSuite {
     assert(round.units(1).fixtures(0).forall(_.isInstanceOf[PlayedMatch]))
   }
 
-  test ("stepping test") {
+  test("stepping test") {
     //given
     val t1 = Team(1, 1)
     val t2 = Team(2, 2)
@@ -197,11 +197,11 @@ class GroupRoundTest extends FunSuite {
       fail("Stepping test supposed to end with exception thrown")
     } catch {
       case _: IllegalStateException => None
-      case _:Throwable              => fail("Stepping test supposed to end with IllegalStateException thrown")
+      case _: Throwable => fail("Stepping test supposed to end with IllegalStateException thrown")
     }
   }
 
-  test ("promoted teams test") {
+  test("promoted teams test") {
     for (i <- 0 to 30) {
       //given
       val t1 = Team(1, 1)

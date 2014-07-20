@@ -2,7 +2,7 @@ package dedep.bonobo._match.evaluator
 
 import com.typesafe.scalalogging.slf4j.Logger
 import dedep.bonobo._match.Match
-import dedep.bonobo._match.result.{Draw, WinB, WinA, MatchResult}
+import dedep.bonobo._match.result.{Draw, MatchResult, WinA, WinB}
 import org.slf4j.LoggerFactory
 
 import scala.util.Random
@@ -28,7 +28,7 @@ object NormalDistributionBasedMatchEvaluator extends MatchEvaluator {
   }
 
   def calcBalancePoint(m: Match): Double =
-    log2 (m.aTeam.value.toDouble / m.bTeam.value.toDouble) / 2
+    log2(m.aTeam.value.toDouble / m.bTeam.value.toDouble) / 2
 
   private def log2(x: Double) = Math.log(x) / Math.log(2)
 

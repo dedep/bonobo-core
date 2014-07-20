@@ -1,8 +1,8 @@
 package dedep.bonobo.round.group
 
 import dedep.bonobo.Common._
-import dedep.bonobo.round.{RoundUnit, Round}
 import dedep.bonobo.round.group.GroupRound._
+import dedep.bonobo.round.{Round, RoundUnit}
 import dedep.bonobo.team.Team
 
 import scala.util.Random

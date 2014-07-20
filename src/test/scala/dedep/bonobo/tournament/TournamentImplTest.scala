@@ -7,7 +7,7 @@ import org.scalatest.FunSuite
 
 class TournamentImplTest extends FunSuite {
 
-  test ("should create preliminary playoff round") {
+  test("should create preliminary playoff round") {
     //given
     val t1 = Team(1, 1)
     val t2 = Team(2, 2)
@@ -33,7 +33,7 @@ class TournamentImplTest extends FunSuite {
     assert(tournament.rounds(0).teams.count(t => t == t10 || t == t1 || t == t2 || t == t3) == 4)
   }
 
-  test ("should not create preliminary round - create group round instead") {
+  test("should not create preliminary round - create group round instead") {
     //given
     val t1 = Team(1, 1)
     val t2 = Team(2, 2)
@@ -80,7 +80,7 @@ class TournamentImplTest extends FunSuite {
     assert(tournament.rounds(0).teams.size == 32)
   }
 
-  test ("should not create preliminary round - create playoff round instead") {
+  test("should not create preliminary round - create playoff round instead") {
     //given
     val t1 = Team(1, 1)
     val t2 = Team(2, 2)
@@ -103,7 +103,7 @@ class TournamentImplTest extends FunSuite {
     assert(tournament.rounds(0).teams.size == 8)
   }
 
-  test ("should process tournament") {
+  test("should process tournament") {
     //given
     val t1 = Team(1, 1)
     val t2 = Team(2, 2)

@@ -10,8 +10,8 @@ object PointsPromotionStrategy extends PromotionsStrategy {
     round.units
       .map(ru => Random.shuffle(ru.results))
       .map(_
-        .sortBy(r => r.goalsConceded - r.goalsScored)
-        .sortBy(-_.points)
+      .sortBy(r => r.goalsConceded - r.goalsScored)
+      .sortBy(-_.points)
       )
       .flatMap(_.take(round.getPromotedTeamsCount))
       .map(_.team)

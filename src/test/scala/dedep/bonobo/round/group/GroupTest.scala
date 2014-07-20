@@ -2,13 +2,13 @@ package dedep.bonobo.round.group
 
 import dedep.bonobo.Common._
 import dedep.bonobo._match.PlayedMatch
-import dedep.bonobo._match.result.{WinA, Draw}
+import dedep.bonobo._match.result.{Draw, WinA}
 import dedep.bonobo.team.Team
 import org.scalatest.FunSuite
 
 class GroupTest extends FunSuite {
 
-  test ("test teams") {
+  test("test teams") {
     //given
     val t1 = Team(1, 1)
     val t2 = Team(2, 2)
@@ -20,7 +20,7 @@ class GroupTest extends FunSuite {
     assert(group.teams == t1 :: t2 :: t3 :: t4 :: Nil)
   }
 
-  test ("test group fixtures count") {
+  test("test group fixtures count") {
     //given
     val t1 = Team(1, 1)
     val t2 = Team(2, 2)
@@ -32,7 +32,7 @@ class GroupTest extends FunSuite {
     assert(group.fixturesCount == 6)
   }
 
-  test ("test group fixtures") {
+  test("test group fixtures") {
     //given
     val t1 = Team(1, 1)
     val t2 = Team(2, 2)
@@ -58,7 +58,7 @@ class GroupTest extends FunSuite {
     assert(Set(group.fixtures(5)(0).aTeam, group.fixtures(5)(0).bTeam, group.fixtures(5)(1).aTeam, group.fixtures(5)(1).bTeam).size == 4)
   }
 
-  test ("test 3-group fixtures") {
+  test("test 3-group fixtures") {
     //given
     val t1 = Team(1, 1)
     val t2 = Team(2, 2)
@@ -75,7 +75,7 @@ class GroupTest extends FunSuite {
     assert(group.fixtures(5).size == 1)
   }
 
-  test ("test default results") {
+  test("test default results") {
     val t1 = Team(1, 1)
     val t2 = Team(2, 2)
     val t3 = Team(3, 3)
@@ -95,7 +95,7 @@ class GroupTest extends FunSuite {
     assert(group.results(3).points == 0)
   }
 
-  test ("test results update - one fixture") {
+  test("test results update - one fixture") {
     //given
     val t1 = Team(1, 1)
     val t2 = Team(2, 2)
@@ -134,7 +134,7 @@ class GroupTest extends FunSuite {
     assert(updatedResults(3).goalsConceded == 2)
   }
 
-  test ("playing fixture test - first fixture") {
+  test("playing fixture test - first fixture") {
     //given
     val t1 = Team(1, 1)
     val t2 = Team(2, 2)
@@ -171,7 +171,7 @@ class GroupTest extends FunSuite {
     assert(playedUnit.results(0).points + playedUnit.results(1).points + playedUnit.results(2).points + playedUnit.results(3).points >= 4)
   }
 
-  test ("playing fixture test - two fixtures") {
+  test("playing fixture test - two fixtures") {
     //given
     val t1 = Team(1, 1)
     val t2 = Team(2, 2)

@@ -36,13 +36,13 @@ class MathUtilsTest extends FunSuite {
     assert(MathUtils.isPowerOfTwo(4096))
   }
 
-//  test("-1 is not power of 2") {
-//    assert(!MathUtils.isPowerOfTwo(-1))
-//  }
+  //  test("-1 is not power of 2") {
+  //    assert(!MathUtils.isPowerOfTwo(-1))
+  //  }
 
-//  test("0 is not power of 2") {
-//    assert(!MathUtils.isPowerOfTwo(0))
-//  }
+  //  test("0 is not power of 2") {
+  //    assert(!MathUtils.isPowerOfTwo(0))
+  //  }
 
   test("1 is highest power of two lower or equal to 1") {
     assert(MathUtils.getFloorPowerOfTwoNumber(1) == 1)

@@ -1,9 +1,9 @@
 package dedep.bonobo.round
 
 import dedep.bonobo.Common._
+import dedep.bonobo._match.{Match, PlayedMatch}
 import dedep.bonobo.round.result.TeamResult
 import dedep.bonobo.team.Team
-import dedep.bonobo._match.{PlayedMatch, Match}
 
 import scala.annotation.tailrec
 
@@ -43,7 +43,7 @@ trait RoundUnit {
         val bTeamResults = acc(bTeamResultIndex)
 
         accumulateFixtureResults(t, acc.updated(aTeamResultIndex, aTeamResults aPlus h.result)
-           .updated(bTeamResultIndex, bTeamResults bPlus h.result))
+          .updated(bTeamResultIndex, bTeamResults bPlus h.result))
       case _ => throw new IllegalStateException("Cannot accumulate fixture results for unplayed match")
     }
 

@@ -7,6 +7,8 @@ object MathUtils {
 
   def getFloorPowerOfTwoNumber(number: Int): Int = {
     require(number >= 1)
-    Stream.iterate(1){_ * 2}.takeWhile(_ <= number).last
+    Stream.iterate(1) {
+      _ * 2
+    }.takeWhile(_ <= number).last
   }
 }

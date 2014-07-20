@@ -1,8 +1,8 @@
 package dedep.bonobo.tournament
 
 import dedep.bonobo.Common._
-import dedep.bonobo.round.group.GroupRound
 import dedep.bonobo.round.Round
+import dedep.bonobo.round.group.GroupRound
 import dedep.bonobo.round.pair.PlayoffRound
 import dedep.bonobo.team.Team
 import dedep.bonobo.utils.MathUtils
@@ -46,7 +46,7 @@ case class TournamentImpl(override val teams: List[Team], override val rounds: L
   private def getPreliminaryRoundTeamsNumber: Int = (teams.length - MathUtils.getFloorPowerOfTwoNumber(teams.length)) * 2
 
   override def isFinished(): Boolean = rounds.headOption match {
-    case None           => false
+    case None => false
     case Some(r: Round) => r.isFinished() && r.isFinalRound()
   }
 }

@@ -8,5 +8,6 @@ trait Tournament {
   val rounds: List[Round]
 
   def doStep(): Tournament
+
   def isFinished(): Boolean
 }

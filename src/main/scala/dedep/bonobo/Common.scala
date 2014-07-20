@@ -1,10 +1,10 @@
 package dedep.bonobo
 
+import dedep.bonobo._match.Match
 import dedep.bonobo._match.evaluator.NormalDistributionBasedMatchEvaluator
-import _match.Match
+import dedep.bonobo.round.promotion.PointsPromotionStrategy
 import dedep.bonobo.round.result.FootballPointsGrantingStrategy
 import dedep.bonobo.team.Team
-import dedep.bonobo.round.promotion.PointsPromotionStrategy
 
 object Common {
   type Pot = List[Team]
